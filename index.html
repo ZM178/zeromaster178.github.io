@@ -1,0 +1,109 @@
+<!DOCTYPE html><head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Navbar with Dropdown</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.jpg" alt="Logo" class="logo-image">
+        </div>
+        <div class="profile-menu">
+            <img src="more.png" alt="Profile Picture" class="profile-image" onclick="toggleMenu()">
+            <div class="dropdown-menu" id="dropdownMenu">
+<a href="https://youtube.com/@zeromaster178?si=w-RBpFg8DNI3l5ow" class="dropdown-item" target="_blank">
+    <img src="yt.png" alt="Contact Icon" class="icon">
+    YouTube
+</a>
+
+
+<a href="https://www.instagram.com/zeromaster_178?igsh=NWJ2ZmpzbnB5M2M5" class="dropdown-item" target="_blank">
+    <img src="ig.jpeg" alt="Contact Icon" class="icon">
+    Instagram
+</a>
+
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('dropdownMenu');
+            menu.classList.toggle('show');
+        }
+        
+function navigateTo(page) {
+    switch (page) {
+        case 'home':
+            window.location.url= 'home.html';
+            break;
+        case 'contact':
+            window.location.href = 'contact.html';
+            break;
+        case 'donasi':
+            window.location.href = 'donasi.html';
+            break;
+    }
+}
+
+        window.onclick = function(event) {
+            if (!event.target.matches('.profile-image')) {
+                const dropdowns = document.getElementsByClassName("dropdown-menu");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    const openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
+
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Add-ons</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>My Add-ons</h1>
+    </header>
+
+    <section class="addon-list">
+        <article class="addon">
+            <h2>katana addon</h2>
+            <img src="addon_1.jpeg" alt="katana addon">
+            <p>feel bored with vanilla weapon? you come to the right place.</p>
+             <a href="addon_1.html" class="button" target="_blank">See More</a>
+
+            <a href="download-link-1" class="button">Download</a>
+        </article>
+
+        <article class="addon">
+    <h2>more structure </h2>
+    <img src="addon_2.jpeg" alt="more structure addon">
+    <p>Description of the add-on, explaining its features and usage.</p>
+    <a href="https://linkvertise.com/251694/zero-more-structure?o=sharing" class="button">Download</a>
+</article>
+
+        <article class="addon">
+    <h2>more structure addon </h2>
+    <img src="addon_2.jpeg" alt="more structure addon">
+    <p>Description of the add-on, explaining its features and usage.</p>
+    <a href="https://linkvertise.com/251694/zero-more-structure?o=sharing" class="button">Download</a>
+</article>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Zeromaster 178. All rights reserved.</p>
+    </footer>
+</body>
+</html>
